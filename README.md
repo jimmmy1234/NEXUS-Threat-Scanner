@@ -1,6 +1,6 @@
 # NEXUS Threat Scanner
 
-NEXUS Threat Scanner is a web-based URL analysis tool that checks a target link for possible phishing and cybersecurity warning signs. It uses an AI prompt to inspect the URL structure, identify suspicious patterns, and return a risk result with clear warnings.
+NEXUS Threat Scanner is a web-based URL analysis tool that checks a target link for possible phishing and cybersecurity warning signs. It uses local browser-based heuristics to inspect the URL structure, identify suspicious patterns, and return a risk result with clear warnings.
 
 ## Features
 
@@ -10,21 +10,20 @@ NEXUS Threat Scanner is a web-based URL analysis tool that checks a target link 
 - Displays warning messages explaining possible risks
 - Uses a cyber-themed responsive interface
 - Runs directly in the browser as a static website
+- Does not require login, installation, or an API key
 
 ## How It Works
 
-1. The user enters a Google Gemini API token.
-2. The app unlocks the scanner screen after the token format is accepted.
-3. The user enters a target URL.
-4. The app sends the URL to the Gemini API for analysis.
-5. The AI response is shown as a risk report with URL anatomy and warnings.
+1. The user enters a target URL.
+2. The app checks the URL in the browser using local rules.
+3. The scanner looks for warning signs such as unsafe protocols, IP-address hosts, suspicious keywords, hidden destinations, link shorteners, and brand impersonation patterns.
+4. The result is shown as a risk report with URL anatomy and warnings.
 
 ## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
-- Google Gemini API
 
 ## Project Structure
 
@@ -40,15 +39,8 @@ NEXUS Threat Scanner/
 
 1. Download or clone this repository.
 2. Open `index.html` in a web browser.
-3. Enter your Gemini API key when asked.
-4. Paste a URL into the scanner.
-5. Click `Initiate Scan`.
-
-## API Key Note
-
-This project asks for an API key in the browser. Do not publish your real API key in the code, screenshots, README, or GitHub commits.
-
-For a production version, the API request should be handled through a secure backend server instead of directly from the browser.
+3. Paste a URL into the scanner.
+4. Click `Initiate Scan`.
 
 ## Example URLs to Test
 
